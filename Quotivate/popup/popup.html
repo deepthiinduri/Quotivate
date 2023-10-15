@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotivate: Fueling Your Progress Daily</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+
+</head>
+<body>
+  <div class="sidenav">
+    <button id="homeNav">Home</button>
+    <button id="reminderNav">Reminder</button>
+    <button id="pomodoroNav">Pomodoro</button>
+    <button id="youtubeNav">YouTube Integration</button>
+    <button id="blockSiteNav">Website Blocking</button>
+    <button id="quoteNav">Motivational Quotes</button>
+  </div>
+
+  <div class="content">
+
+    <div id="homeSection" class="section">
+      <img src="../images/Quotivate1.png" alt="Your Image Description" style="display: block; margin: 0 auto; width: 300px; height: 300px;">
+      <p>Fueling Your Progress Daily</p>
+    </div>
+
+
+    <!-- Reminder Section -->
+    <div id="reminderSection" class="section">
+      <h1>Reminders</h1>
+      <div class="reminder-form">
+        <input type="text" id="reminderInput" placeholder="Enter reminder">
+        <input type="date" id="dueDateInput">
+        <input type="time" id="dueTimeInput">
+        <button id="setReminderButton">Set Reminder</button>
+      </div>
+      <div id="reminderList" class="reminder-list"></div>
+    </div>
+
+
+    <!-- Customized Pomodoro Section -->
+    <div id="pomodoroSection" class="section">
+      <div class="container">
+        <div class="timer-container">
+          <div class="timer">
+            <div id="progress" class="progress"></div>
+            <div id="time" class="time">00:00</div>
+          </div>
+        </div>
+        <p></p>
+        <label for="customTime">Custom Timer Duration (minutes):</label>
+        <input type="number" id="customTime" min="1" step="1" placeholder="Enter minutes">
+        <div class="btn-pair">
+          <button id="start-timer-btn" class="pomodorobuttons">▶</button>
+          <span class="spacer1"></span>
+          <button id="reset-timer-btn" class="pomodorobuttons">&#x21BA;</button>
+        </div>
+        <div class="btn-pair">
+          <button id="start-customtimer-btn">Set Custom Time</button>
+          <span class="spacer2"></span>
+          <button id="add-task-btn">Add Task</button>
+        </div>
+        <div id="task-container"></div>
+      </div>
+    </div>
+
+
+    <!-- YouTube Integration Section -->
+    <div id="youtubeSection" class="section">
+      <h1>YouTube Integration</h1>
+      <input type="text" id="youtubeUrlInput" placeholder="Enter YouTube URL" style="width: 95%;">
+      <button id="playYoutubeButton">Play YouTube</button>
+      <div id="youtubePlayer">
+        <iframe id="youtubeIframe" width="100%" height="315" src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+      
+    </div>
+
+    <!-- Website Blocking Section -->
+    <div id="blockSiteSection" class="section">
+      <h1>Website Blocking</h1>
+      &nbsp;
+      <p class="title">Enter URL Below</p>
+  
+      <div class="inputBoxes">
+        <form id="formBox">
+          <input type="text" id="textbox" size="25"/>
+        </form>
+        <form id="formBox">
+          <input type="text" id="textbox2" size="25"/>
+        </form>
+        <form id="formBox">
+          <input type="text" id="textbox3" size="25"/>
+        </form>
+        <form id="formBox">
+          <input type="text" id="textbox4" size="25"/>
+        </form>
+        <form id="formBox">
+          <input type="text" id="textbox5" size="25"/>
+        </form>
+      </div>
+  
+      <div class="websiteblockbutton">
+        <button type="submit" id="submitButton" value="Save" onclick="save()">Save</button>
+        <button type="submit" id="submitButton2" value="Save" onclick="save()">Save</button>
+        <button type="submit" id="clearButton" value="Clear LS" onclick="clear()">Clear</button>
+      </div>
+  
+      <h3 id ="errorMessage"> </h3>
+    </div>
+
+
+    <!-- Motivational Quotes Section -->
+    <div id="quoteSection" class="section">
+      <h1>Motivational Quotes</h1>
+      <div class="quote-container">
+        <div id="motivationalQuote" class="quote">Loading...</div>
+        <button id="reloadMotivationalQuoteButton" class="reload-button">&#x21BA;</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

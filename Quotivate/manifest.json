@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Quotivate: Fueling Your Progress Daily",
+  "version": "0.1.0",
+  "description": "A productivity tool with daily task setting, customized Pomodoro, YouTube integration, website blocking, and motivational quotes.",
+  "permissions": [
+    "alarms",
+    "notifications",
+    "activeTab",
+    "storage",
+    "webNavigation",
+    "scripting",
+    "tabs",
+    "webRequest"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "48": "images/Quotivate1.png"
+    }
+  },
+  "icons": {
+    "48": "images/Quotivate1.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["content/content.js"],
+       "matches": ["<all_urls>"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
