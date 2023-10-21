@@ -45,6 +45,10 @@ In the Reminder section, you can set reminders for your tasks.
 <p align="center">
   <img src="https://github.com/deepthiinduri/Quotivate/blob/main/Quotivate/images/PomodoroSection.png" alt="Pomodoro Section">
 </p>
+
+<p align="center">
+  <img src="https://github.com/deepthiinduri/Quotivate/blob/main/Quotivate/images/PomodoroSectionChromeNotification.png" alt="Pomodoro Section">
+</p>
  
 Pomodoro timer with options to set a custom timer duration and manage tasks.
 
