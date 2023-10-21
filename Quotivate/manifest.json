@@ -22,13 +22,6 @@
   "icons": {
     "48": "images/Quotivate1.png"
   },
-  "content_scripts": [
-    {
-      "js": ["content/content.js"],
-       "matches": ["<all_urls>"],
-      "run_at": "document_start"
-    }
-  ],
   "background": {
     "service_worker": "background.js"
   }
